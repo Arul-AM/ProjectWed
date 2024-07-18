@@ -408,6 +408,13 @@ span {
 
 
 /*----------------------vendor section------------*/
+   /* Vendor Section */
+   .vendor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 
 .vendor-list {
     align-items: center;
