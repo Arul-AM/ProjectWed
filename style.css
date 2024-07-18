@@ -412,7 +412,7 @@ span {
 .vendor-list {
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
 }
 
