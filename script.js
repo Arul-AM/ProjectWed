@@ -63,3 +63,50 @@ var formattedDate = `${date.getDate()} ${month} ${date.getFullYear()}`;
 function openLink() {
     window.location.href = 'https://maps.app.goo.gl/viC2zUN7MYbvb6xD9';
 }
+
+
+function showTab(tabId) {
+    var tabs = document.getElementsByClassName('tab');
+    var contents = document.getElementsByClassName('tab-content');
+    
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+    }
+    
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+    }
+    
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+}
+
+function openGoogleForm() {
+    window.open('https://forms.gle/JaAkahn2W4hkSu6w6', '_blank');
+}
+
+
+
+/*-----------Room---------------*/
+
+    // Function to share image via WhatsApp
+    function shareToWhatsApp(imageUrl) {
+        var phoneNumber = '919940994802'; // Replace with your desired phone number
+        var message = 'Check out this image: ' + window.location.origin + '/' + imageUrl;
+        var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+        
+        // Open WhatsApp with the constructed URL
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // Add click event listeners to each div
+    document.getElementById('decoration').onclick = function() {
+        shareToWhatsApp('room1.jpg');
+    };
+    document.getElementById('lighting').onclick = function() {
+        shareToWhatsApp('room2.jpg');
+    };
+    document.getElementById('dj').onclick = function() {
+        shareToWhatsApp('room3.jpg');
+    };
+
