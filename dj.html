@@ -46,65 +46,13 @@
 
 		<!-- ====== Services ======  -->
 		<section class="services section-padding bg-gray text-center pb-70" data-scroll-index="2">
-			<h1>BLENDED VEGETABLE OIL</h1>
 			<div class="container">
 				<div class="row">
 					<!-- items -->
 					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil01.jpg', 'BRAND : AONE', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil01.jpg" alt="image">
-						</div><br>
-						<h1>BRAND : AONE</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil02.jpg', 'NAME : ANANDHAM', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil02.jpg" alt="image">
-						</div><br>
-						<h1>NAME : ANANDHAM</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil03.jpg', 'BRAND : KRISHNA', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil03.jpg" alt="image">
-						</div><br>
-						<h1>BRAND : KRISHNA</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
-					</div>
-				</div>
-			</div>
-		
-			<div class="container">
-				<h1>PEANUT OIL</h1>
-				<div class="row">
-					<!-- items -->
-					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil04.jpg', 'NAME : BALAJI', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil04.jpg" alt="image">
-						</div><br>
-						<h1>NAME : BALAJI</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
-					</div>
-				</div>
-			</div>
-		
-			<div class="container">
-				<h1>RBD PALMOLEIN OIL</h1>
-				<div class="row">
-					<!-- items -->
-					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil05.jpg', 'NAME : RUCHI', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil05.jpg" alt="image">
-						</div><br>
-						<h1>NAME : RUCHI</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="item" onclick="shareToWhatsApp('oil06.jpg', 'BRAND : REAL DROP', 'QUANTITY : 15 KG Litre/tin')">
-							<img src="oil06.jpg" alt="image">
-						</div><br>
-						<h1>BRAND : REAL DROP</h1>
-						<h2>QUANTITY : 15 KG Litre/tin</h2>
+						<div class="item" onclick="shareToWhatsApp('02.jpg')">
+							<img src="02.jpg" alt="image">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -112,12 +60,9 @@
 
 		
 		<script>
-			function shareToWhatsApp(imageUrl, brand, quantity) {
+			function shareToWhatsApp(imageUrl) {
 				var phoneNumber = '919940994802'; // Replace with your desired phone number
-				var message = `Check out this product:
-		Brand: ${brand}
-		Quantity: ${quantity}
-		Image: ${window.location.origin}/${imageUrl}`;
+				var message = 'Check out this image: ' + window.location.origin + '/' + imageUrl;
 				var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
 				
 				// Open WhatsApp with the constructed URL
@@ -125,8 +70,8 @@
 			}
 		</script>
 		
-
-<!--------------------------------------------footer section--------------------------->
+		
+			<!--------------------------------------------footer section--------------------------->
 			<footer id="contact">
 				<div class="container">
 					<div class="f-container">

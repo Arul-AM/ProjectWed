@@ -14,6 +14,7 @@
     <title>Nakshatira Mahal</title>
 
     <!-- bootstrap css -->
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style-event.css">
     <link rel="stylesheet" href="stylenakshtra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -36,22 +37,21 @@
         <div id="menu-bar"><i class="fas fa-bars"></i></div>
     </header>
     <section class="services section-padding bg-gray text-center pb-70" data-scroll-index="2">
+        <h1>Click To share Your Decration On WhatsApp</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="item decoration">
+                    <div class="item decoration" onclick="shareToWhatsApp('n1.jpg')">
                         <img src="n1.jpg" alt="image">
-                       
-                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="item lighting">
+                    <div class="item lighting" onclick="shareToWhatsApp('n2.jpg')">
                         <img src="n2.jpg" alt="image">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="item dj">
+                    <div class="item dj" onclick="shareToWhatsApp('n3.jpg')">
                         <img src="n3.jpg" alt="image">
                     </div>
                 </div>
@@ -62,6 +62,10 @@
         </div>
     </section>
 
+    
+
+    
+    
   
 
 </body>

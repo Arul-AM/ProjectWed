@@ -36,26 +36,43 @@
         <div id="menu-bar"><i class="fas fa-bars"></i></div>
     </header>
     <section class="services section-padding bg-gray text-center pb-70" data-scroll-index="2">
+        <h1>Click To share Your Decration On WhatsApp</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div id="decoration" class="item decoration">
+                    <div id="decoration" class="item decoration" onclick="shareToWhatsApp('room1.jpg')">
                         <img src="room1.jpg" alt="image">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div id="lighting" class="item lighting">
+                    <div id="lighting" class="item lighting" onclick="shareToWhatsApp('room2.jpg')">
                         <img src="room2.jpg" alt="image">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div id="dj" class="item dj">
+                    <div id="dj" class="item dj" onclick="shareToWhatsApp('room3.jpg')">
                         <img src="room3.jpg" alt="image">
                     </div>
                 </div>
             </div>
         </div>
-    </section> 
+        <div class="button-container">
+            <button class="btn" onclick="openGoogleForm()">Book Your Service</button>
+        </div>
+        
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function shareToWhatsApp(imageUrl) {
+            var phoneNumber = '919940994802'; // Replace with your desired phone number
+            var message = 'Check out this image: ' + window.location.origin + '/' + imageUrl;
+            var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+            
+            // Open WhatsApp with the constructed URL
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
     
     
 

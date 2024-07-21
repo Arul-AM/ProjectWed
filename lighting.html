@@ -48,31 +48,28 @@
 		<section class="services section-padding bg-gray text-center pb-70" data-scroll-index="2">
 			<div class="container">
 				<div class="row">
-
 					<!-- items -->
 					<div class="col-md-4">
-						<div class="item">
-							<img src="s1.jpg" alt="image">
+						<div class="item" onclick="shareToWhatsApp('01.jpg')">
+							<img src="01.jpg" alt="image">
 						</div>
 					</div>
-                    <div class="col-md-4">
-						<div class="item">
-							<img src="s2.jpg" alt="image">
-						</div>
-					</div>
-                    <div class="col-md-4">
-						<div class="item">
-							<img src="s3.jpg" alt="image">
-						</div>
-					</div>
-                    <div class="col-md-4">
-						<div class="item">
-							<img src="s4.jpg" alt="image">
-						</div>
-					</div>
-					
 				</div>
 			</div>
+		</section>
+
+		
+		<script>
+			function shareToWhatsApp(imageUrl) {
+				var phoneNumber = '919940994802'; // Replace with your desired phone number
+				var message = 'Check out this image: ' + window.location.origin + '/' + imageUrl;
+				var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+				
+				// Open WhatsApp with the constructed URL
+				window.open(whatsappUrl, '_blank');
+			}
+		</script>
+		
 		
 			<!--------------------------------------------footer section--------------------------->
 			<footer id="contact">

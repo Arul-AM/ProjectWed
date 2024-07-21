@@ -46,71 +46,91 @@
 
 		<!-- ====== Services ======  -->
 		<section class="services section-padding bg-gray text-center pb-70" data-scroll-index="2">
+		
 			<div class="container">
 				<div class="row">
-
 					<!-- items -->
 					<div class="col-md-4">
-						<div class="item">
+						<div class="item" onclick="shareToWhatsApp('s1.jpg')">
 							<img src="s1.jpg" alt="image">
 						</div>
 					</div>
-                    <div class="col-md-4">
-						<div class="item">
+					<div class="col-md-4">
+						<div class="item" onclick="shareToWhatsApp('s2.jpg')">
 							<img src="s2.jpg" alt="image">
 						</div>
 					</div>
-                    <div class="col-md-4">
-						<div class="item">
+					<div class="col-md-4">
+						<div class="item" onclick="shareToWhatsApp('s3.jpg')">
 							<img src="s3.jpg" alt="image">
 						</div>
 					</div>
-                    <div class="col-md-4">
-						<div class="item">
+					<div class="col-md-4">
+						<div class="item" onclick="shareToWhatsApp('s4.jpg')">
 							<img src="s4.jpg" alt="image">
 						</div>
 					</div>
-					
 				</div>
 			</div>
+			<div class="button-container">
+				<button class="btn" onclick="openGoogleForm()">Book Your Service</button>
+			</div>
+		</section>
 		
-			<!--------------------------------------------footer section--------------------------->
-			<footer id="contact">
-				<div class="container">
-					<div class="f-container">
-						<h2>WedMeGood - Your Personal Wedding Planner</h2><br>
-						<p>Plan your wedding with Us WedMeGood is an Indian Wedding Planning Website </p>
-						<div>
-							<button class="btn">Register as a Vendor</button>
-						</div>
-						<div class="social">
-							<i class="fab fa-facebook"></i>
-							<i class="fab fa-instagram"></i>
-							<i class="fab fa-linkedin"></i>
-							<i class="fab fa-twitter"></i>
-							<i class="fab fa-pinterest"></i>
-						</div>
+		<script>
+			function shareToWhatsApp(imageUrl) {
+				var phoneNumber = '919940994802'; // Replace with your desired phone number
+				var message = 'Check out this image: ' + window.location.origin + '/' + imageUrl;
+				var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+				
+				// Open WhatsApp with the constructed URL
+				window.open(whatsappUrl, '_blank');
+			}
+		</script>
+		
+
+
+
+ <!--------------------------------------------footer section--------------------------->
+		 <footer id="contact">
+			<div class="container">
+				<div class="f-container">
+					<h2>WedMeGood - Your Personal Wedding Planner</h2><br>
+					<p>Plan your wedding with Us WedMeGood is an Indian Wedding Planning Website </p>
+					<div>
+						<button class="btn">Register as a Vendor</button>
 					</div>
-					<div class="f-container">
-						<h2>Our Location</h2>
-						<a href="#"><i class="fas fa-angle-right"></i>Anand</a>
-						<a href="#"><i class="fas fa-angle-right"></i>Vadodara</a>
-						<a href="#"><i class="fas fa-angle-right"></i>Mumbai</a>
-						<a href="#" "><i class=" fas fa-angle-right "></i>Ahemdabad</a>
-							<a href="# "><i class="fas fa-angle-right "></i>Surat</a>
-						</div>
-						
-						<div class="f-container ">
-							<h2>Our Newsletter</h2>
-							<p>Subscribe for latest updates</p>
-							<input type="text " placeholder="Enter Your Email ">
-							<button class="btn ">Subscribe</button>
-							</div>
+					<div class="social">
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-linkedin"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-pinterest"></i>
 					</div>
-				</footer>
-				<div class="copyright ">
-					<p>Copyright ©2022 All Rights Reserved | Knowledge Place KP</p>
 				</div>
+				<div class="f-container">
+					<h2>Our Location</h2>
+					<a href="#"><i class="fas fa-angle-right"></i>Anand</a>
+					<a href="#"><i class="fas fa-angle-right"></i>Vadodara</a>
+					<a href="#"><i class="fas fa-angle-right"></i>Mumbai</a>
+					<a href="#" "><i class=" fas fa-angle-right "></i>Ahemdabad</a>
+						<a href="# "><i class="fas fa-angle-right "></i>Surat</a>
+					</div>
+					
+					<div class="f-container ">
+						<h2>Our Newsletter</h2>
+						<p>Subscribe for latest updates</p>
+						<input type="text " placeholder="Enter Your Email ">
+						<button class="btn ">Subscribe</button>
+						</div>
+				</div>
+			</footer>
+			<div class="copyright ">
+				<p>Copyright ©2022 All Rights Reserved | Knowledge Place KP</p>
+			</div>
+			<script src="script.js"></script>
+		
+			
 
     </body>
 
