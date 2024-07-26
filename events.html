@@ -198,8 +198,6 @@
         }
     </script>
   
-
-</body>
  <!--------------------------------------------footer section--------------------------->
  <footer id="contact">
     <div class="container">
@@ -207,7 +205,7 @@
             <h2>WedMeGood - Your Personal Wedding Planner</h2><br>
             <p>Plan your wedding with Us WedMeGood is an Indian Wedding Planning Website </p>
             <div>
-                <button class="btn">Register as a Vendor</button>
+                <button class="btn">For Booking</button>
             </div>
             <div class="social">
                 <i class="fab fa-facebook"></i>
@@ -218,21 +216,42 @@
             </div>
         </div>
         <div class="f-container">
-            <h2>Our Location</h2>
-            <a href="#"><i class="fas fa-angle-right"></i>Anand</a>
-            <a href="#"><i class="fas fa-angle-right"></i>Vadodara</a>
-            <a href="#"><i class="fas fa-angle-right"></i>Mumbai</a>
-            <a href="#" "><i class=" fas fa-angle-right "></i>Ahemdabad</a>
-                <a href="# "><i class="fas fa-angle-right "></i>Surat</a>
+            <h2>Our Events</h2>
+            <a href="#"><i class="fas fa-angle-right"></i>Marriage</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Receptions</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Baby Showering</a>
+            <a href="#" ><i class=" fas fa-angle-right "></i>Educational Shows</a>
+                <a href="# "><i class="fas fa-angle-right "></i>Fashion Shows</a>
             </div>
             
-            <div class="f-container ">
+            <div class="f-container">
                 <h2>Our Newsletter</h2>
                 <p>Subscribe for latest updates</p>
-                <input type="text " placeholder="Enter Your Email ">
-                <button class="btn ">Subscribe</button>
-                </div>
+                <input type="text" id="emailInput" placeholder="Enter Your Email">
+                <button class="btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
         </div>
     </footer>
+    <div class="copyright ">
+        <p>Copyright ©2022 All Rights Reserved | Knowledge Place KP</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+ let menu = document.querySelector('#menu-bar');
+let head = document.querySelector('.head .navbar');
 
+menu.onclick = () => {
+    head.classList.toggle('active');
+};
+
+window.onscroll = () => {
+    head.classList.remove('active');
+    if (window.scrollY > 60) {
+        document.querySelector('#menu-bar').classList.add('active');
+    } else {
+        document.querySelector('#menu-bar').classList.remove('active');
+    }
+};
+</script>
 </html>
