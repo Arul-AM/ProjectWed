@@ -41,25 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function generateCard() {
-    var name1 = document.getElementById("name1").value;
-    var name2 = document.getElementById("name2").value;
-    var date = new Date(document.getElementById("date").value);
-    
-    // Get month name
-    var monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"];
-var month = monthNames[date.getMonth()];
-
-// Format date for display
-var formattedDate = `${date.getDate()} ${month} ${date.getFullYear()}`;
-    
-    document.getElementById("name1Text").innerText = name1;
-    document.getElementById("name2Text").innerText = name2;
-    document.getElementById("dateText").innerText = formattedDate;
-}
-
-
 function openLink() {
     window.location.href = 'https://maps.app.goo.gl/viC2zUN7MYbvb6xD9';
 }
